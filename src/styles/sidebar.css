@@ -1,0 +1,173 @@
+.imgIcon {
+  font-size: 40px;
+  color: #ccc;
+  /* background-color: #ccc; */
+}
+
+.imgIcons {
+  font-size: 20px;
+  color: #555;
+  margin: 0 5px;
+}
+
+.topInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background-color: #e3e3e3;
+}
+
+.formSearch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.formSearch input {
+  width: 90%;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #eee;
+  color: black;
+  margin: 0 auto;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+}
+
+.header {
+  background-color: rgb(11, 96, 11);
+  width: 100%;
+  padding: 30px 10px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.backImg {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.header h3 {
+  font-weight: 400;
+}
+
+.imageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profileIcon {
+  font-size: 150px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.profileImg {
+  width: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profileWhiteCard {
+  background-color: white;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.flexedRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.greenText {
+  color: green;
+  padding-bottom: 10px;
+}
+
+.dropDownDiv {
+  position: relative;
+}
+
+.dropDown {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  width: 150px;
+  font-size: 13px;
+  right: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 4px;
+}
+
+.dropDown li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.addFriendCard {
+  position: absolute;
+  background-color: #fff;
+  top: 150%;
+  left: 65%;
+  width: 400px;
+  height: fit-content;
+  padding-bottom: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  max-height: 400px;
+}
+
+.addFriendCard form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addFriendCard div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.addFriendCard div h3 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.addFriendCard form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.addFriendCard form input {
+  width: 90%;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #555;
+  opacity: 0.5;
+  width: 90vw;
+  height: 90vh;
+}
