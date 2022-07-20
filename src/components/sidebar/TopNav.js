@@ -43,7 +43,7 @@ function TopNav({ setProfile }) {
     setDropDown(false);
   };
 
-  const handleSearch = (async = (e) => {});
+  // const handleSearch = async = (e) => {});
 
   return (
     <div style={{ width: "100%", position: "relative" }}>
@@ -95,7 +95,7 @@ function TopNav({ setProfile }) {
           <form>
             <input
               value={friend}
-              onChange={(e) => handleSearch(e)}
+              // onChange={(e) => handleSearch(e)}
               placeholder="Search friends by their emails"
             />
           </form>
