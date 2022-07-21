@@ -1,5 +1,6 @@
+import { addDoc } from "firebase/firestore";
 import React, { useState, useContext } from "react";
-import { loginUser, registerUser } from "../firebase";
+import { colRef, loginUser, registerUser } from "../firebase";
 import { DataContext } from "./../store/GlobalStore";
 
 function Login(props) {
@@ -19,9 +20,21 @@ function Login(props) {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    registerUser(email, password).catch((err) => {
-      dispatch({ type: "NOTIFY", payload: { error: err.message } });
-    });
+    registerUser(email, password)
+      // .then((res) => {
+      //   const newUser = {
+      //     displayName: res.user.email,
+      //     imageUrl:
+      //       "https://img.icons8.com/external-becris-flat-becris/2x/external-user-avatars-becris-flat-becris.png",
+      //     email: res.user.email,
+      //     about: "Hi, i just joined whatsapp😇",
+      //   };
+
+      //   addDoc(colRef, newUser).catch((err) => console.log(err.message));
+      // })
+      .catch((err) => {
+        dispatch({ type: "NOTIFY", payload: { error: err.message } });
+      });
   };
 
   return (

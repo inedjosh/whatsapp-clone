@@ -11,8 +11,9 @@ import Login from "./pages/Login";
 import Sidebar from "./components/sidebar/Sidebar";
 import Welcome from "./components/Welcome";
 import Chat from "./components/Chat";
-import { auth } from "./firebase";
+import { auth, colRef } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { onSnapshot } from "firebase/firestore";
 
 function App() {
   const { state, dispatch } = useContext(DataContext);
@@ -21,11 +22,25 @@ function App() {
     const unsubAuth = onAuthStateChanged(auth, (user) => {
       dispatch({ type: "AUTH", payload: { user } });
     });
-    console.log(state.auth);
+
     return () => {
       unsubAuth();
     };
   }, [dispatch, auth]);
+
+  // useEffect(() => {
+  //   const unSub = onSnapshot(colRef, (snapshot) => {
+  //     let user = [];
+  //     snapshot.docs.forEach((doc) => {
+  //       user.push({ ...doc.data(), id: doc.id });
+  //     });
+  //     console.log(user);
+  //   });
+
+  //   return () => {
+  //     unSub();
+  //   };
+  // }, [auth.user]);
 
   return (
     <div>
